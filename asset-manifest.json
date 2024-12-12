@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/constrain/static/css/main.5e4b54cb.css",
-    "main.js": "/constrain/static/js/main.6e341978.js",
-    "static/js/787.82f88c47.chunk.js": "/constrain/static/js/787.82f88c47.chunk.js",
-    "static/media/circular.png": "/constrain/static/media/circular.9a71d495d880201db6ba.png",
-    "index.html": "/constrain/index.html",
-    "main.5e4b54cb.css.map": "/constrain/static/css/main.5e4b54cb.css.map",
-    "main.6e341978.js.map": "/constrain/static/js/main.6e341978.js.map",
-    "787.82f88c47.chunk.js.map": "/constrain/static/js/787.82f88c47.chunk.js.map"
+    "main.css": "/explain-agile/static/css/main.5e4b54cb.css",
+    "main.js": "/explain-agile/static/js/main.1e4735b8.js",
+    "static/js/787.82f88c47.chunk.js": "/explain-agile/static/js/787.82f88c47.chunk.js",
+    "static/media/circular.png": "/explain-agile/static/media/circular.9a71d495d880201db6ba.png",
+    "index.html": "/explain-agile/index.html",
+    "main.5e4b54cb.css.map": "/explain-agile/static/css/main.5e4b54cb.css.map",
+    "main.1e4735b8.js.map": "/explain-agile/static/js/main.1e4735b8.js.map",
+    "787.82f88c47.chunk.js.map": "/explain-agile/static/js/787.82f88c47.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5e4b54cb.css",
-    "static/js/main.6e341978.js"
+    "static/js/main.1e4735b8.js"
   ]
 }
