@@ -1,4 +1,4 @@
-Visit https://andrewcloete.github.io/constrain/ to play
+Visit https://cbbldtgthr.github.io/explain-agile/ to play
 
 
 Deploy with `npm run deploy`
