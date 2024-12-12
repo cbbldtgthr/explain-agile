@@ -19,6 +19,7 @@ import Avatar from "@mui/material/Avatar";
 import Divider from "@mui/material/Divider";
 
 import CircularSlider from "@fseehawer/react-circular-slider";
+import { Coffee } from "./Coffee";
 
 function lineToSvgLine(line: Line, id: string) {
   var newLine = document.createElementNS("http://www.w3.org/2000/svg", "line");
@@ -253,13 +254,13 @@ export function Arena(props: { back: () => void }) {
     if (!divRef.current) return;
 
     const rect = divRef.current.getBoundingClientRect();
-    const calibrationX = 100/rect.width
-    const calibrationY = 100/rect.height
+    const calibrationX = 100 / rect.width;
+    const calibrationY = 100 / rect.height;
 
-    const clickX = ((event.clientX - rect.left)) * calibrationX;
-    const clickY = -((event.clientY - rect.top)) * calibrationY;
+    const clickX = (event.clientX - rect.left) * calibrationX;
+    const clickY = -(event.clientY - rect.top) * calibrationY;
 
-    game.stepAbs(clickX, clickY)
+    game.stepAbs(clickX, clickY);
     setPlayer(game.state());
     svg.current = renderSvg(game, showGoal);
     setGame(game);
@@ -340,6 +341,7 @@ export function Arena(props: { back: () => void }) {
               Why?
             </Button>
           </div>
+          <Coffee></Coffee>
         </div>
 
         <div ref={divRef} className={styles.mapdiv}>

@@ -1,5 +1,6 @@
 import { Button } from "@mui/material";
 import DirectionsWalkIcon from "@mui/icons-material/DirectionsWalk";
+import { Coffee } from "./Coffee";
 
 import styles from "./Arena.module.css";
 export function Intro(props: {
@@ -154,6 +155,16 @@ export function Intro(props: {
                   </a>{" "}
                   by Richard P. Rumelt
                 </li>
+                <li>
+                  <a href="https://www.goodreads.com/book/show/10158633-adapt">
+                    Adapt
+                  </a>{" "}
+                  and{" "}
+                  <a href="https://www.goodreads.com/book/show/28815513-messy">
+                    Messy
+                  </a>{" "}
+                  by Tim Harford
+                </li>
               </ul>
             </>
           )}
@@ -165,6 +176,9 @@ export function Intro(props: {
             </a>
             . Feel free to share.
           </i>
+          <div className="w-full sm:w-1/2 m-2">
+            <Coffee></Coffee>
+          </div>
         </article>
       </div>
     </div>
