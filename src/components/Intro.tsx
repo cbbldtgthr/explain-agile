@@ -171,7 +171,7 @@ export function Intro(props: {
 
           <i>
             By{" "}
-            <a href="https://github.com/AndrewCloete/constrain">
+            <a href="https://github.com/cbbldtgthr/explain-agile">
               Andrew Cloete
             </a>
             . Feel free to share.
