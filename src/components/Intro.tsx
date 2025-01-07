@@ -1,6 +1,5 @@
 import { Button } from "@mui/material";
 import DirectionsWalkIcon from "@mui/icons-material/DirectionsWalk";
-import { Coffee } from "./Coffee";
 
 import styles from "./Arena.module.css";
 export function Intro(props: {
@@ -60,9 +59,8 @@ export function Intro(props: {
               <h3>The number of steps does not matter</h3>
               <p>
                 You are only judged by the <b>distance</b> traveled, not the
-                number of steps taken. The most efficient path is to set the
-                step size to 1 and do lots of clicks. People tend to make one of
-                two mistakes:
+                number of steps taken. The most efficient path is to do lots of
+                short clicks. People tend to make one of two mistakes:
               </p>
               <ol>
                 <li>
@@ -76,16 +74,24 @@ export function Intro(props: {
 
               <p>
                 Both of these lead to a longer path traveled. The best way is
-                take small steps, quickly, all the time.
+                take small steps, all the time.
               </p>
 
               <h3>Takeaways</h3>
               <ul>
                 <li>
-                  Playing is not possible without real-time, concrete{" "}
-                  <b>feedback</b>. Define your goals in <b>quantifiable</b>{" "}
-                  terms so you have a mental "temperature gauge" to guide you.
-                  You'll know what this looks like in your domain.
+                  Playing is not possible without having a sense of what you
+                  want and then some way to get real-time, concrete{" "}
+                  <b>feedback</b>. Define and communicate the goal in{" "}
+                  <b>experimental</b> terms so you have a mental "temperature
+                  gauge" to guide you. You will know what this looks like in
+                  your domain.
+                </li>
+                <li>
+                  The underlying philosopy is that an evolusionary model of
+                  constant experimentation through variation and selection is
+                  really the <i>only viable way</i> to navigate an extremely
+                  complicated problem.
                 </li>
                 <li>
                   Do whatever to keep your SDLC as short as possible. This will
@@ -94,6 +100,10 @@ export function Intro(props: {
                   day is a good start.
                 </li>
               </ul>
+              <img
+                src={process.env.PUBLIC_URL + "/pain_of_change.png"}
+                alt="Pain of Change"
+              />
               <p>
                 In a future version of the game, I also want add a variable
                 timeout between steps to show how this naturally leads you to
@@ -170,15 +180,10 @@ export function Intro(props: {
           )}
 
           <i>
-            By{" "}
-            <a href="https://github.com/cbbldtgthr/explain-agile">
-              Andrew Cloete
-            </a>
-            . Feel free to share.
+            By <a href="http://buymeacoffee.com/cbbldtgthr">Andrew Cloete</a>.
+            Feel free to share! Source available{" "}
+            <a href="https://github.com/cbbldtgthr/explain-agile">here</a>.
           </i>
-          <div className="w-full sm:w-1/2 m-2">
-            <Coffee></Coffee>
-          </div>
         </article>
       </div>
     </div>
