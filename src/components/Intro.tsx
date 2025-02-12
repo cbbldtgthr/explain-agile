@@ -56,6 +56,28 @@ export function Intro(props: {
           {props.hintOpen && (
             <>
               <p>OK, but you probably will forget this advice...</p>
+              <h3>The <b>problem</b> with this model...</h3>
+              <img
+                src={process.env.PUBLIC_URL + "/og_agile-mini.jpg"}
+                alt="OG Agile model"
+              />
+              <p>
+                This picture is generally fine for explaining product evolution in terms of de-risking capital investment.
+                However, it provides little insight for <i>developers</i> {" "} and what strategies will help them practically in their day-to-day work.
+              </p>
+              <p>
+                <u>Problem 1:</u> {" "}
+                We are all familiar with skateboards, scooters, and cars. But software worth building should, by definition, be something {" "}
+                <i>unknown</i>.
+              </p>
+              <p>
+                <u>Problem 2:</u> {" "}
+
+                Consider a factory that produces skateboards versus one that produces scooters.
+                You can't simply swap out a few dies and start producing skateboards one day and scooters the next.
+              </p>
+
+              <h2>A better model</h2>
               <h3>The number of steps does not matter</h3>
               <p>
                 You are only judged by the <b>distance</b> traveled, not the
