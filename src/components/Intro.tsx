@@ -68,13 +68,15 @@ export function Intro(props: {
               <p>
                 <u>Problem 1:</u> {" "}
                 We are all familiar with skateboards, scooters, and cars. But software worth building should, by definition, be something {" "}
-                <i>unknown</i>.
+                <i>unknown</i>. Great software products are usually <i>discovered</i> {" "} rather than <i>willed</i> {" "} into existence.
               </p>
               <p>
                 <u>Problem 2:</u> {" "}
-
                 Consider a factory that produces skateboards versus one that produces scooters.
-                You can't simply swap out a few dies and start producing skateboards one day and scooters the next.
+                You can't simply swap out a few dies and start producing
+                skateboards one day and scooters the next. So even though those
+                two things are very similar from a <i>user prespective</i>, the factory
+                that produces each likely looks and operates very differently.
               </p>
 
               <h2>A better model</h2>
