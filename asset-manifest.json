@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/explain-agile/static/css/main.5e4b54cb.css",
-    "main.js": "/explain-agile/static/js/main.75a9eadb.js",
+    "main.js": "/explain-agile/static/js/main.89ab33a9.js",
     "static/js/787.82f88c47.chunk.js": "/explain-agile/static/js/787.82f88c47.chunk.js",
     "static/media/circular.png": "/explain-agile/static/media/circular.9a71d495d880201db6ba.png",
     "index.html": "/explain-agile/index.html",
     "main.5e4b54cb.css.map": "/explain-agile/static/css/main.5e4b54cb.css.map",
-    "main.75a9eadb.js.map": "/explain-agile/static/js/main.75a9eadb.js.map",
+    "main.89ab33a9.js.map": "/explain-agile/static/js/main.89ab33a9.js.map",
     "787.82f88c47.chunk.js.map": "/explain-agile/static/js/787.82f88c47.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5e4b54cb.css",
-    "static/js/main.75a9eadb.js"
+    "static/js/main.89ab33a9.js"
   ]
 }
