@@ -67,7 +67,7 @@ function renderSvg(game: Game, showGoal: boolean): SVGSVGElement {
   svgLines.forEach((l) => {
     svg.append(l);
   });
-  const startSvg = pointToSvgCircle(game.startPosition(), "start", "green");
+  const startSvg = pointToSvgCircle(game.startPosition(), "start", "#6385FF");
   svg.append(startSvg);
   if (showGoal || game.complete()) {
     const goalSvg = pointToSvgCircle(game.goalPosition(), "goal", "goldenrod");
@@ -317,27 +317,29 @@ export function Arena() {
           <Divider />
           <div style={{ display: "flex" }}>
             <div className={styles.score}>
-              <div className={styles.scoreText}> TEMPERATURE</div>
+              <div className={styles.scoreText}> Temperature</div>
               <div>
-                <span className={styles.stat} style={{ color: "#176dc8" }}>
+                <span className={styles.stat} style={{ color: "#374783" }}>
                   {(player.temperature * 100).toFixed()}%
                 </span>
               </div>
             </div>
-            {player.complete && (
+          </div>
+          {player.complete && (
+            <div style={{ display: "flex" }}>
               <div
                 className={styles.score}
-                style={{ color: "rgba(237, 108, 2)" }}
+                style={{ color: player.efficiency > 0.5 ? "darkgreen" : "darkred" }}
               >
-                <div className={styles.scoreText}>SCORE</div>
+                <div className={styles.scoreText}>Final score!</div>
                 <div>
                   <span className={styles.stat}>
                     {(player.efficiency * 100).toFixed()}%
                   </span>
                 </div>
               </div>
-            )}
-          </div>
+            </div>
+          )}
           <div className={styles.form}>
             <Button variant="contained" onClick={() => navigate("/about")} fullWidth={true}>
               Why?

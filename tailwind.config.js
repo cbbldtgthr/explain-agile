@@ -9,7 +9,15 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    darkMode: 'class',
     extend: {
+      typography: {
+        DEFAULT: {
+          css: {
+            '--tw-prose-body': 'white', // Change to your preferred color
+          },
+        },
+      },
       colors: {
         khaki: "rgb(99, 80, 10)",
         lkhaki: "rgb(190, 175, 154)",
