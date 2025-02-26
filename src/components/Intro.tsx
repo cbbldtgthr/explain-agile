@@ -179,11 +179,23 @@ export function About() {
               <div className="w-full sm:w-1/2 m-2">
               </div>
             </div>
-            <i>
-              By <a href="http://buymeacoffee.com/cbbldtgthr">Andrew Cloete</a>.
-              Feel free to share! Source available{" "}
-              <a href="https://github.com/cbbldtgthr/">here</a>.
-            </i>
+            <h3>Video explanation</h3>
+            <div className={styles.video_wrapper}>
+              <iframe
+                width="100%"
+                height="100%"
+                src="https://www.youtube.com/embed/QB64DILwuSk"
+                allow="fullscreen; picture-in-picture; web-share"
+              >
+              </iframe>
+            </div>
+            <div className="mt-3">
+              <i>
+                By <a href="http://buymeacoffee.com/cbbldtgthr">Andrew Cloete</a>.
+                Feel free to share! Source available{" "}
+                <a href="https://github.com/cbbldtgthr/">here</a>.
+              </i>
+            </div>
           </article>
         </div>
       </div>
@@ -240,11 +252,14 @@ export function Intro() {
               </Button>
             </div>
           </div>
-          <i>
-            By <a href="http://buymeacoffee.com/cbbldtgthr">Andrew Cloete</a>.
-            Feel free to share! Source available{" "}
-            <a href="https://github.com/cbbldtgthr/">here</a>.
-          </i>
+          <div className="mt-3">
+            <i >
+              By <a href="http://buymeacoffee.com/cbbldtgthr">Andrew Cloete</a>.
+              Feel free to share! Source available{" "}
+              <a href="https://github.com/cbbldtgthr/">here</a>.
+            </i>
+          </div>
+
         </article>
       </div>
     </div>
