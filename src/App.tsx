@@ -1,38 +1,21 @@
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
 
-import { useState } from "react";
 
 import { Arena } from "./components/Arena";
-import { Intro } from "./components/Intro";
+import { Intro, About } from "./components/Intro";
 
 function App() {
-  const [modalOpen, setIntroOpen] = useState(true);
-  const [hint, setHint] = useState(false);
-
-  function hintClick() {
-    setHint(!hint);
-  }
-
   return (
-    <>
-      {modalOpen && (
-        <Intro
-          hintOpen={hint}
-          play={() => setIntroOpen(false)}
-          hintClick={hintClick}
-        />
-      )}
-      {!modalOpen && (
-        <Arena
-          back={() => {
-            setIntroOpen(true);
-            setHint(true);
-          }}
-        />
-      )}
-    </>
+    <Router basename="/explain-agile">
+      <Routes>
+        <Route path="/" element={<Intro />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/arena" element={<Arena />} />
+      </Routes>
+    </Router>
   );
 }
 

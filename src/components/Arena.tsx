@@ -1,4 +1,5 @@
 import { useState, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import { Game, GameState, newGoal, Line, Point } from "../models/game/game";
 import styles from "./Arena.module.css";
 import circular from "./circular.png";
@@ -208,7 +209,8 @@ function parseEvent(event: any): string {
 const START_DISTANCE = "5";
 const START_DIRECTION = "0";
 
-export function Arena(props: { back: () => void }) {
+export function Arena() {
+  const navigate = useNavigate();
   const [distance, setDistance] = useState<string>(START_DISTANCE);
   const [directionDeg, setDirectionDeg] = useState<string>(START_DIRECTION);
   const [showGoal, setShowGoal] = useState<boolean>(false);
@@ -337,8 +339,13 @@ export function Arena(props: { back: () => void }) {
             )}
           </div>
           <div className={styles.form}>
-            <Button variant="contained" onClick={props.back} fullWidth={true}>
+            <Button variant="contained" onClick={() => navigate("/about")} fullWidth={true}>
               Why?
+            </Button>
+          </div>
+          <div className={styles.form}>
+            <Button variant="outlined" onClick={() => navigate("/")} fullWidth={true}>
+              Home
             </Button>
           </div>
           <Coffee></Coffee>
