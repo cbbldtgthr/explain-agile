@@ -243,12 +243,12 @@ export function Arena() {
     setShowGoal(!showGoal);
   }
 
-  function step() {
-    game.step(parseFloat(distance), parseFloat(directionDeg));
-    setPlayer(game.state());
-    svg.current = renderSvg(game, showGoal);
-    setGame(game);
-  }
+  // function step() {
+  //   game.step(parseFloat(distance), parseFloat(directionDeg));
+  //   setPlayer(game.state());
+  //   svg.current = renderSvg(game, showGoal);
+  //   setGame(game);
+  // }
 
   const divRef = useRef<HTMLDivElement>(null);
 
@@ -267,6 +267,10 @@ export function Arena() {
     svg.current = renderSvg(game, showGoal);
     setGame(game);
   };
+
+  function temp_color(temp_change: number): string {
+    return temp_change == 0 ? "#374783" : temp_change > 0 ? "red" : "green"
+  }
 
   return (
     <div className={styles.root}>
@@ -319,8 +323,13 @@ export function Arena() {
             <div className={styles.score}>
               <div className={styles.scoreText}> Temperature</div>
               <div>
-                <span className={styles.stat} style={{ color: "#374783" }}>
+                <span className={styles.stat} style={{ color: temp_color(player.temp_change) }}>
                   {(player.temperature * 100).toFixed()}%
+                </span>
+              </div>
+              <div>
+                <span className={styles.stat_temp} style={{ color: temp_color(player.temp_change) }}>
+                  {player.temp_change == 0 ? "" : player.temp_change > 0 ? "Colder" : "Warmer"}
                 </span>
               </div>
             </div>

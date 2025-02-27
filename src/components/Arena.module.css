@@ -60,6 +60,10 @@
   font-size: 2rem;
 }
 
+.stat_temp {
+  font-size: 1rem;
+}
+
 .scoreText {
   color: rgb(120, 120, 120);
   margin-bottom: 5px;

@@ -30,6 +30,7 @@ export type GameState = {
   traveled: number;
   fromHome: number;
   temperature: number;
+  temp_change: number;
   efficiency: number;
   complete: boolean;
 };
@@ -59,11 +60,13 @@ export class Game {
   private goal: Point;
   private threshold: number;
   private path: Point[];
+  private prev_temp: number;
 
   constructor(goal: Point) {
     this.goal = goal;
     this.threshold = 1;
     this.path = [start];
+    this.prev_temp = 0;
   }
 
   startPosition() {
@@ -80,7 +83,7 @@ export class Game {
 
   step(distance: number, directionDeg: number) {
     const move = spericalToCart(distance, directionDeg);
-    this.stepDelta(move.x, move.y)
+    this.stepDelta(move.x, move.y);
   }
 
   stepDelta(deltaX: number, deltaY: number) {
@@ -89,7 +92,8 @@ export class Game {
     this.path.push(newPoint);
   }
   stepAbs(x: number, y: number) {
-    this.path.push({x, y});
+    this.prev_temp = this.temperature();
+    this.path.push({ x, y });
   }
 
   travelDistance() {
@@ -157,6 +161,7 @@ export class Game {
       traveled: this.travelDistance(),
       fromHome: this.vectorDistanceFromStart(),
       temperature: this.temperature(),
+      temp_change: this.prev_temp - this.temperature(),
       efficiency: this.efficiency(),
       complete: this.complete(),
     };
